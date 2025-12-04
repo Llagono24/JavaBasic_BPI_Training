@@ -1,0 +1,15 @@
+/**
+ * 
+ */
+package m2.exer1;
+
+public class Car {
+
+	String Name;
+	String plateNum;
+	double price;
+	
+	
+	
+
+}

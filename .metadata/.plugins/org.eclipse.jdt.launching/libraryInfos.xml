@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<libraryInfos>
+    <libraryInfo home="C:\Program Files\Java\jdk-17" version="17.0.10"/>
+    <libraryInfo home="C:\Users\GSTJLlagano\Desktop\Java Training\openlogic-openjdk-17.0.14+7-windows-x64" version="17.0.14"/>
+    <libraryInfo home="C:\Users\GSTJLlagano\Desktop\Java Training\sts-4.31.0.RELEASE\plugins\org.eclipse.justj.openjdk.hotspot.jre.full.win32.x86_64_21.0.7.v20250502-0916\jre" version="21.0.7"/>
+    <libraryInfo home="C:\Program Files (x86)\Java\jre1.6.0_06" version="1.6.0_06">
+        <bootpath>
+            <entry path="C:\Program Files (x86)\Java\jre1.6.0_06\lib\resources.jar"/>
+            <entry path="C:\Program Files (x86)\Java\jre1.6.0_06\lib\rt.jar"/>
+            <entry path="C:\Program Files (x86)\Java\jre1.6.0_06\lib\sunrsasign.jar"/>
+            <entry path="C:\Program Files (x86)\Java\jre1.6.0_06\lib\jsse.jar"/>
+            <entry path="C:\Program Files (x86)\Java\jre1.6.0_06\lib\jce.jar"/>
+            <entry path="C:\Program Files (x86)\Java\jre1.6.0_06\lib\charsets.jar"/>
+            <entry path="C:\Program Files (x86)\Java\jre1.6.0_06\classes"/>
+        </bootpath>
+        <extensionDirs>
+            <entry path="C:\Program Files (x86)\Java\jre1.6.0_06\lib\ext"/>
+            <entry path="C:\WINDOWS\Sun\Java\lib\ext"/>
+        </extensionDirs>
+        <endorsedDirs>
+            <entry path="C:\Program Files (x86)\Java\jre1.6.0_06\lib\endorsed"/>
+        </endorsedDirs>
+    </libraryInfo>
+    <libraryInfo home="C:\Program Files (x86)\Java\jdk1.6.0_17" version="1.6.0_17">
+        <bootpath>
+            <entry path="C:\Program Files (x86)\Java\jdk1.6.0_17\jre\lib\resources.jar"/>
+            <entry path="C:\Program Files (x86)\Java\jdk1.6.0_17\jre\lib\rt.jar"/>
+            <entry path="C:\Program Files (x86)\Java\jdk1.6.0_17\jre\lib\sunrsasign.jar"/>
+            <entry path="C:\Program Files (x86)\Java\jdk1.6.0_17\jre\lib\jsse.jar"/>
+            <entry path="C:\Program Files (x86)\Java\jdk1.6.0_17\jre\lib\jce.jar"/>
+            <entry path="C:\Program Files (x86)\Java\jdk1.6.0_17\jre\lib\charsets.jar"/>
+            <entry path="C:\Program Files (x86)\Java\jdk1.6.0_17\jre\classes"/>
+        </bootpath>
+        <extensionDirs>
+            <entry path="C:\Program Files (x86)\Java\jdk1.6.0_17\jre\lib\ext"/>
+            <entry path="C:\WINDOWS\Sun\Java\lib\ext"/>
+        </extensionDirs>
+        <endorsedDirs>
+            <entry path="C:\Program Files (x86)\Java\jdk1.6.0_17\jre\lib\endorsed"/>
+        </endorsedDirs>
+    </libraryInfo>
+    <libraryInfo home="C:\Users\GSTJLlagano\Desktop\Java Training\sts-4.31.0.RELEASE\plugins\org.eclipse.justj.openjdk.hotspot.jre.full.win32.x86_64_21.0.7.v20250502-0916" version="21.0.7">
+        <bootpath>
+            <entry path="null"/>
+        </bootpath>
+        <extensionDirs>
+            <entry path="null"/>
+        </extensionDirs>
+        <endorsedDirs>
+            <entry path="null"/>
+        </endorsedDirs>
+    </libraryInfo>
+    <libraryInfo home="C:\Program Files (x86)\Java\jre6" version="1.6.0_17">
+        <bootpath>
+            <entry path="C:\Program Files (x86)\Java\jre6\lib\resources.jar"/>
+            <entry path="C:\Program Files (x86)\Java\jre6\lib\rt.jar"/>
+            <entry path="C:\Program Files (x86)\Java\jre6\lib\sunrsasign.jar"/>
+            <entry path="C:\Program Files (x86)\Java\jre6\lib\jsse.jar"/>
+            <entry path="C:\Program Files (x86)\Java\jre6\lib\jce.jar"/>
+            <entry path="C:\Program Files (x86)\Java\jre6\lib\charsets.jar"/>
+            <entry path="C:\Program Files (x86)\Java\jre6\classes"/>
+        </bootpath>
+        <extensionDirs>
+            <entry path="C:\Program Files (x86)\Java\jre6\lib\ext"/>
+            <entry path="C:\WINDOWS\Sun\Java\lib\ext"/>
+        </extensionDirs>
+        <endorsedDirs>
+            <entry path="C:\Program Files (x86)\Java\jre6\lib\endorsed"/>
+        </endorsedDirs>
+    </libraryInfo>
+    <libraryInfo home="C:\Program Files\Java\jdk-18.0.2.1" version="18.0.2.1"/>
+</libraryInfos>

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<launchConfiguration type="org.eclipse.jdt.launching.localJavaApplication">
+    <listAttribute key="org.eclipse.debug.core.MAPPED_RESOURCE_PATHS">
+        <listEntry value="/M2_Activity1/src/JavaTrainingM2Act1/BasicJavaProjectM2Act1.java"/>
+    </listAttribute>
+    <listAttribute key="org.eclipse.debug.core.MAPPED_RESOURCE_TYPES">
+        <listEntry value="1"/>
+    </listAttribute>
+    <booleanAttribute key="org.eclipse.jdt.launching.ATTR_EXCLUDE_TEST_CODE" value="true"/>
+    <stringAttribute key="org.eclipse.jdt.launching.MAIN_TYPE" value="JavaTrainingM2Act1.BasicJavaProjectM2Act1"/>
+    <stringAttribute key="org.eclipse.jdt.launching.MODULE_NAME" value="M2_Activity1"/>
+    <stringAttribute key="org.eclipse.jdt.launching.PROJECT_ATTR" value="M2_Activity1"/>
+</launchConfiguration>
