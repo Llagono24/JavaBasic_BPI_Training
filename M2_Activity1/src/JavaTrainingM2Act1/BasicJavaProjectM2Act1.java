@@ -8,9 +8,9 @@ public class BasicJavaProjectM2Act1 {
 		
 		Book myBook = new Book();
 		
-		myBook.Title = "Noli Me Tangere";
+		myBook.title = "Noli Me Tangere";
 		myBook.learn();
-		System.out.println(myBook.Title);
+		System.out.println(myBook.title);
 	}
 
 }

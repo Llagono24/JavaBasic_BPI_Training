@@ -2,7 +2,7 @@ package JavaTrainingM2Act1;
 
 public class House {
 	
-	String Address;
+	String address;
 	int floor;
 	
 	void occupy() {

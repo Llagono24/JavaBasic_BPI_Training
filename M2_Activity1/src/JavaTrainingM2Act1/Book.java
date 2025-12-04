@@ -2,7 +2,7 @@ package JavaTrainingM2Act1;
 
 public class Book {
 	
-	String Title;
+	String title;
 	double price;
 	
 	void learn() {

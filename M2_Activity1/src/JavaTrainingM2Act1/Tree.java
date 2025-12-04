@@ -2,7 +2,7 @@ package JavaTrainingM2Act1;
 
 public class Tree {
 	
-	String Type;
+	String type;
 	int age;
 	
 	void cleanAir() {
