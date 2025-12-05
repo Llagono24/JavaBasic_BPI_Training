@@ -1,0 +1,22 @@
+package m2.exer1;
+
+public class Exercise1 {
+
+	public static void main(String[] args) {
+
+		// Instantiate no args constructor
+		Car myCar = new Car();
+		// Instantiate with args constructor
+		Car my2ndCar = new Car("Sedan", "White", 10000.0f);
+		
+		// set value of no args object
+		myCar.setColor("White");
+		myCar.setCarType("SUV");
+		myCar.setPrice(9999990);
+		
+		// call method of class Car
+		my2ndCar.showInfo();
+		myCar.showInfo();
+	}
+
+}
