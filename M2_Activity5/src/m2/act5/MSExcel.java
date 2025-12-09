@@ -3,7 +3,8 @@ package m2.act5;
 public class MSExcel extends Program{
 	
 	public MSExcel(String name) {
-		super(name);
+		//super(name);
+		this.setName(name);
 	}
 	
 	@Override
