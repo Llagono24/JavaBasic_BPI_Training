@@ -19,6 +19,7 @@ public class Car extends Vehicle implements Refuelable {
 		System.out.println("Refueling the car...");
 	}
 	
+	@Override
 	public void destroy() {
 		System.out.println("This brand of car "+this.getBrand()+" and "+this.getNumberOfWheels()+" wheeler is destroyed");
 		
