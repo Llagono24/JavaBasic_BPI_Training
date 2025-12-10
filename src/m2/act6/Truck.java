@@ -2,12 +2,16 @@ package m2.act6;
 
 public class Truck extends Vehicle implements Refuelable {
 	
+	//No args constructor
 	public Truck() {
 		
 	}
 	
+	//With args constructor
 	public Truck(int numberOfWheels, String brand) {
-		super(numberOfWheels, brand);
+		//super(numberOfWheels, brand);
+		this.setNumberOfWheels(numberOfWheels);
+		this.setBrand(brand);
 	}
 	
 	@Override
