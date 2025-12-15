@@ -11,7 +11,7 @@ public class M3_Activity1 {
 		
 		Scanner input = new Scanner(System.in);
 		
-		List<String> products = new ArrayList<String>();
+		List<String> products = new ArrayList<>();
 		
 		products.add("Laptop");
 		products.add("Mouse");
@@ -45,7 +45,7 @@ public class M3_Activity1 {
 		
 		
 		
-
+		input.close();
 	}
 
 }
