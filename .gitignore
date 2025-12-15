@@ -24,5 +24,4 @@ hs_err_pid*
 replay_pid*
 /.metadata/
 
-# Ignore all hidden files and directories (starting with a dot)
-.*
+
