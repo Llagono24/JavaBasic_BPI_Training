@@ -35,7 +35,7 @@ public class M3_Activity3 {
 				printAllProducts();
 			}else if(choice == 4) {
 				findCheapestProduct();
-			}else if(choice == 4) {
+			}else if(choice == 5) {
 				System.out.println("Exiting...");
 			}else {
 				System.out.println("Invalid Input!");
