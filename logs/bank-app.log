@@ -1,0 +1,23 @@
+2026-01-16 13:00:08.807 [INFO] m4.act8.M4_Activity6 - Deposit requested: ₱5000.0
+2026-01-16 13:00:08.811 [INFO] m4.act8.M4_Activity6 - Deposit completed: ₱5000.0, New balance: ₱15000.0
+2026-01-16 13:00:08.812 [INFO] m4.act8.M4_Activity6 - Withdrawal requested: ₱3000.0
+2026-01-16 13:00:08.812 [INFO] m4.act8.M4_Activity6 - Withdrawal completed: ₱3000.0, New balance: ₱12000.0
+2026-01-16 13:00:08.812 [INFO] m4.act8.M4_Activity6 - Deposit requested: ₱-500.0
+2026-01-16 13:00:08.813 [ERROR] m4.act8.M4_Activity6 - Invalid deposit amount: ₱-500.0
+2026-01-16 13:00:08.813 [ERROR] m4.act8.M4_Activity6 - Deposit failed: Deposit amount must be positive
+m4.act8.InvalidAmountException: Deposit amount must be positive
+	at M4_Activity8/m4.act8.M4_Activity6.deposit(M4_Activity6.java:58)
+	at M4_Activity8/m4.act8.M4_Activity6.lambda$2(M4_Activity6.java:20)
+	at M4_Activity8/m4.act8.M4_Activity6.runTest(M4_Activity6.java:81)
+	at M4_Activity8/m4.act8.M4_Activity6.main(M4_Activity6.java:20)
+2026-01-16 13:00:08.816 [INFO] m4.act8.M4_Activity6 - Withdrawal requested: ₱20000.0
+2026-01-16 13:00:08.817 [WARN] m4.act8.M4_Activity6 - Insufficient funds: ₱12000.0 available
+2026-01-16 13:00:08.817 [ERROR] m4.act8.M4_Activity6 - Deposit failed: Insufficient funds for withdrawal
+m4.act8.InsufficientFundsException: Insufficient funds for withdrawal
+	at M4_Activity8/m4.act8.M4_Activity6.withdraw(M4_Activity6.java:37)
+	at M4_Activity8/m4.act8.M4_Activity6.lambda$3(M4_Activity6.java:21)
+	at M4_Activity8/m4.act8.M4_Activity6.runTest(M4_Activity6.java:81)
+	at M4_Activity8/m4.act8.M4_Activity6.main(M4_Activity6.java:21)
+2026-01-16 13:00:08.818 [INFO] m4.act8.M4_Activity6 - Deposit requested: ₱60000.0
+2026-01-16 13:00:08.818 [WARN] m4.act8.M4_Activity6 - Large deposit: ₱60000.0 - requires verification
+2026-01-16 13:00:08.818 [INFO] m4.act8.M4_Activity6 - Deposit completed: ₱60000.0, New balance: ₱72000.0
