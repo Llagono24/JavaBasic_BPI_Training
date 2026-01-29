@@ -139,7 +139,7 @@ public class App {
 		List<Student> students = query.getResultList();
 		
 		//print student names
-		System.out.println("Result:");
+		System.out.println("Result all students:");
 		students.forEach(student -> System.out.println(student.getName()));
 		
 		em.getTransaction().commit();
@@ -156,7 +156,7 @@ public class App {
 		Long countCourse = (Long) query.getSingleResult();
 		
 		//print course count result
-		System.out.println("Result:");
+		System.out.println("Result: student count with id = 1:");
 		System.out.println(countCourse); 
 		
 		em.getTransaction().commit();
@@ -172,7 +172,7 @@ public class App {
 		Long countStudents = (Long)query.getSingleResult();
 		
 		//print student age greater than
-		System.out.println("Result:");
+		System.out.println("Result student count with age > 25:");
 		System.out.println(countStudents); 
 		
 		em.getTransaction().commit();
