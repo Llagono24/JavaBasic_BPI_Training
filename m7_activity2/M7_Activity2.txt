@@ -1,0 +1,37 @@
+1. curl --location 'localhost:4568/profiles'
+
+2. curl --location 'localhost:4568/profiles' \
+--header 'Content-Type: application/json' \
+--data '{
+    "name": "Jimboy Llagono",
+    "group": "RBANK EDW"
+}'
+
+3. curl --location --request PUT 'localhost:4568/profiles?name=Emilio%20Aguinaldo' \
+--header 'Content-Type: application/json' \
+--data '{
+    "id": 3,
+    "name": "Antonio Luna",
+    "group": "Illustrados"
+}'
+
+
+4. curl --location --request DELETE 'localhost:4568/profiles/3'
+
+5. {
+    "data": [
+        {
+            "id": 1,
+            "name": "Jose Rizal",
+            "group": "Illustrados",
+            "apiCallsMade": null
+        },
+        {
+            "id": 2,
+            "name": "Andres Bonifacio",
+            "group": "KKK",
+            "apiCallsMade": null
+        }
+    ],
+    "status": "Success"
+}

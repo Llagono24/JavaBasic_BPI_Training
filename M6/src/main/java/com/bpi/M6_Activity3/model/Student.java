@@ -3,7 +3,6 @@ package com.bpi.M6_Activity3.model;
 
 
 import java.util.List;
-
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
