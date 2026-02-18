@@ -15,7 +15,7 @@ public class Module8Application {
 		
 		BookService bookService = context.getBean(BookService.class);
 		
-		bookService.logMessage("M8_Activity3 - This is Setter injection");
+		bookService.logMessage("M8_Activity4 - This is Field injection");
 		
 	}
 

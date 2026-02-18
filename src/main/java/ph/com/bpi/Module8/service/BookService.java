@@ -6,14 +6,10 @@ import org.springframework.stereotype.Service;
 @Service
 public class BookService {
 	
-	private LoggerService loggerService;
 	
-	// Setter Injection
+	// Field Injection
 	@Autowired
-	public void setBookService(LoggerService loggerService) {
-		this.loggerService = loggerService;
-	}
-	
+	private LoggerService loggerService;
 	
 	public void logMessage(String msg) {
 		loggerService.log(msg);
