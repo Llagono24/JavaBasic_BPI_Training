@@ -1,14 +1,16 @@
 package ph.com.bpi.Module8.service;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 @Service
 public class BookService {
 	
-	private final LoggerService loggerService;
+	private LoggerService loggerService;
 	
-	// Constructor Injection
-	public BookService(LoggerService loggerService) {
+	// Setter Injection
+	@Autowired
+	public void setBookService(LoggerService loggerService) {
 		this.loggerService = loggerService;
 	}
 	
