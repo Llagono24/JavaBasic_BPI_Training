@@ -1,8 +1,9 @@
-package ph.com.bpi.training;
+package ph.com.bpi.training.repository;
 
 import java.util.List;
 
 import jakarta.persistence.EntityManager;
+import ph.com.bpi.training.model.Movie;
 
 public class MovieRepository implements Repository<Movie, Long> {
 

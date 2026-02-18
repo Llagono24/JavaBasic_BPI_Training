@@ -1,6 +1,8 @@
-/home/jmenguito/eclipse-workspace/m7_activity1/src/main/java/ph/com/bpi/training/EntityManagerUtil.java
-/home/jmenguito/eclipse-workspace/m7_activity1/src/main/java/ph/com/bpi/training/JsonUtil.java
-/home/jmenguito/eclipse-workspace/m7_activity1/src/main/java/ph/com/bpi/training/Main.java
-/home/jmenguito/eclipse-workspace/m7_activity1/src/main/java/ph/com/bpi/training/Movie.java
-/home/jmenguito/eclipse-workspace/m7_activity1/src/main/java/ph/com/bpi/training/MovieRepository.java
-/home/jmenguito/eclipse-workspace/m7_activity1/src/main/java/ph/com/bpi/training/Repository.java
+C:\Users\GSTJLlagano\Desktop\Java Training\Individual Workspace\m7_activity1\src\main\java\ph\com\bpi\training\repository\MovieRepository.java
+C:\Users\GSTJLlagano\Desktop\Java Training\Individual Workspace\m7_activity1\src\main\java\ph\com\bpi\training\service\MovieService.java
+C:\Users\GSTJLlagano\Desktop\Java Training\Individual Workspace\m7_activity1\src\main\java\ph\com\bpi\training\controller\MovieController.java
+C:\Users\GSTJLlagano\Desktop\Java Training\Individual Workspace\m7_activity1\src\main\java\ph\com\bpi\training\model\Movie.java
+C:\Users\GSTJLlagano\Desktop\Java Training\Individual Workspace\m7_activity1\src\main\java\ph\com\bpi\training\util\EntityManagerUtil.java
+C:\Users\GSTJLlagano\Desktop\Java Training\Individual Workspace\m7_activity1\src\main\java\ph\com\bpi\training\repository\Repository.java
+C:\Users\GSTJLlagano\Desktop\Java Training\Individual Workspace\m7_activity1\src\main\java\ph\com\bpi\training\Main.java
+C:\Users\GSTJLlagano\Desktop\Java Training\Individual Workspace\m7_activity1\src\main\java\ph\com\bpi\training\util\JsonUtil.java
