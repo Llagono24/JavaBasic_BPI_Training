@@ -4,7 +4,7 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.ApplicationContext;
 
-//import ph.com.bpi.Module8.service.BookService;
+import ph.com.bpi.Module8.service.BookService;
 import ph.com.bpi.Module8.service.PrototypeService;
 import ph.com.bpi.Module8.service.SingletonService;
 
@@ -15,10 +15,10 @@ public class Module8Application {
 	public static void main(String[] args) {
 		ApplicationContext context = SpringApplication.run(Module8Application.class, args);
 		
-//		BookService bookService = context.getBean(BookService.class);
-//		
-//		bookService.initialBooks();
-//		
+		BookService bookService = context.getBean(BookService.class);
+		
+		bookService.findBook("1");
+		
 		
 		// Get Singleton Beans
 		SingletonService s1 = context.getBean(SingletonService.class);
