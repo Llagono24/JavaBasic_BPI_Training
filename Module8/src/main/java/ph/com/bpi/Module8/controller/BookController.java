@@ -11,28 +11,23 @@ import org.springframework.web.bind.annotation.RestController;
 
 
 import ph.com.bpi.Module8.model.Book;
+import ph.com.bpi.Module8.service.BookService;
 
 @RestController
 @RequestMapping("/api/books")
 public class BookController {
 	
+	BookService bookService = new BookService();
+	
 	@GetMapping
 	public List<Book> initializeBooks() {
-		List<Book> bookList = new ArrayList<Book>();
-		Book book1 = new Book("B1", "The Lord of the Rings", "J.R.R. Tolkien");
-		Book book2 = new Book("B2", "Siddhartha", "Hermann Hesse");
-		Book book3 = new Book("B3", "Harry Potter and the Philosopher's Stone", "J.K. Rowling");
-		
-		bookList.add(book1);
-		bookList.add(book2);
-		bookList.add(book3);
-		
-		return bookList;
+		return bookService.initialBooks();
 	}
+
 	
-//	@GetMapping("/{id}")
-//	public Book getOneBook(@PathVariable String id) {
-//		
-//	}
+	@GetMapping("/{id}")
+	public Book getOneBook(@PathVariable String id) {
+		return bookService.findBook(id);
+	}
 
 }
