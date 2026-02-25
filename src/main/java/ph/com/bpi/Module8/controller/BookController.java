@@ -1,11 +1,15 @@
 package ph.com.bpi.Module8.controller;
 
 import java.util.List;
-import java.util.ArrayList;
 
+
+import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.ResponseStatus;
 import org.springframework.web.bind.annotation.RestController;
 
 
@@ -20,7 +24,7 @@ public class BookController {
 	BookService bookService = new BookService();
 	
 	@GetMapping
-	public List<Book> initializeBooks() {
+	public List<Book> initialBooks() {
 		return bookService.initialBooks();
 	}
 
@@ -28,6 +32,12 @@ public class BookController {
 	@GetMapping("/{id}")
 	public Book getOneBook(@PathVariable String id) {
 		return bookService.findBook(id);
+	}
+	
+	@PostMapping
+	@ResponseStatus(HttpStatus.CREATED)
+	public Book createBook(@RequestBody Book book) {
+		return bookService.saveBook(book);
 	}
 
 }
