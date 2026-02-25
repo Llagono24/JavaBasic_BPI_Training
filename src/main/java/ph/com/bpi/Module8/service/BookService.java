@@ -56,5 +56,21 @@ public class BookService {
 		return book;
 	}
 	
+	//search book
+	public List<Book> searchBook(String title, String author) {
+		
+		List<Book> bookList1 = new ArrayList<Book>();
+		
+		for(int i = 0; i < bookList.size(); i++) {
+			if(bookList.get(i).getTitle().equals(title) && bookList.get(i).getAuthor().equals(author)) {
+				bookList1.add(bookList.get(i));
+			}
+		}
+		
+		
+		return bookList1;
+		 
+	}
+	
 
 }
