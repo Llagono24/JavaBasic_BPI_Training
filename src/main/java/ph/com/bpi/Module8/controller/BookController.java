@@ -27,10 +27,10 @@ public class BookController {
 	public List<Book> initialBooks() {
 		return bookService.initialBooks();
 	}
-
 	
+	//for Activity8.3
 	@GetMapping("/{id}")
-	public Book getOneBook(@PathVariable String id) {
+	public Book getBook(@PathVariable String id) {
 		return bookService.findBook(id);
 	}
 	

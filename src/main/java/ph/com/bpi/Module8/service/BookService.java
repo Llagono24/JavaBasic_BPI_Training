@@ -42,9 +42,7 @@ public class BookService {
 		for(int i = 0; i < bookList.size(); i++) {
 			
 			if(bookList.get(i).getId().equals(id)) {
-				book1 = bookList.get(i);
-				System.out.println(book1.getTitle());
-				
+				book1 = bookList.get(i);	
 			}
 		}
 		
