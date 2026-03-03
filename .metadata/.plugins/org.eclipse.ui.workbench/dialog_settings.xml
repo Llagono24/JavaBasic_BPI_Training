@@ -13,4 +13,8 @@
 			<item value="org.eclipse.m2e"/>
 		</list>
 	</section>
+	<section name="NewWizardAction">
+		<section name="NewWizard.dialogBounds">
+		</section>
+	</section>
 </section>

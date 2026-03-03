@@ -3,7 +3,7 @@ package ph.com.bpi.Module8.service;
 import java.util.ArrayList;
 import java.util.List;
 
-import org.springframework.beans.factory.annotation.Autowired;
+//import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import ph.com.bpi.Module8.model.Book;
@@ -11,10 +11,20 @@ import ph.com.bpi.Module8.model.Book;
 @Service
 public class BookService {
 	List<Book> bookList = new ArrayList<Book>();
-
-	@Autowired
+	
+	
 	public List<Book> initialBooks() {
-		//List<Book> bookList = new ArrayList<Book>();
+		
+		if(bookList == null || bookList.isEmpty() || bookList.size() == 0) {
+			initializeBooks();
+			
+		}
+		
+		return bookList;
+		
+	}
+	
+	public List<Book> initializeBooks() {
 		Book book1 = new Book("1", "The Lord of the Rings", "J.R.R. Tolkien");
 		Book book2 = new Book("2", "Siddhartha", "Hermann Hesse");
 		Book book3 = new Book("3", "Harry Potter and the Philosopher's Stone", "J.K. Rowling");
@@ -32,13 +42,38 @@ public class BookService {
 		for(int i = 0; i < bookList.size(); i++) {
 			
 			if(bookList.get(i).getId().equals(id)) {
-				book1 = bookList.get(i);
-				System.out.println(book1.getTitle());
-				
+				book1 = bookList.get(i);	
 			}
 		}
 		
 		return book1;
+	}
+	
+	public Book saveBook(Book book) {
+
+		bookList.add(book);
+		
+		return book;
+	}
+	
+	//search book
+	public List<Book> searchBook(String title, String author) {
+		
+		List<Book> bookList1 = new ArrayList<Book>();
+		
+		for(int i = 0; i < bookList.size(); i++) {
+			if(bookList.get(i).getTitle().equals(title) && bookList.get(i).getAuthor().equals(author)) {
+				bookList1.add(bookList.get(i));
+			}
+		}
+		
+		
+		return bookList1;
+		 
+	}
+	
+	public List<Book> displayBooks(){
+		return bookList;
 	}
 	
 
