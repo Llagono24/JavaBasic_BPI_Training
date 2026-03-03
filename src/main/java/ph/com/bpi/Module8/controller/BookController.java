@@ -1,6 +1,7 @@
 package ph.com.bpi.Module8.controller;
 
 import java.util.List;
+
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -8,6 +9,7 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.bind.annotation.ResponseStatus;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -19,8 +21,13 @@ import ph.com.bpi.Module8.service.BookService;
 @RestController
 @RequestMapping("/api/books")
 public class BookController {
+
 	
 	BookService bookService = new BookService();
+	
+	public BookController() {
+		bookService.initialBooks();
+	}
 	
 	@GetMapping
 	public List<Book> initialBooks() {
@@ -40,10 +47,19 @@ public class BookController {
 		return bookService.searchBook(title, author);
 	}
 	
+	//For Activity8.5
+	@ResponseBody
+	@GetMapping("/display")
+	public List<Book> displayBooks(){
+		return bookService.displayBooks();
+	}
+	
 	@PostMapping
 	@ResponseStatus(HttpStatus.CREATED)
 	public Book createBook(@RequestBody Book book) {
 		return bookService.saveBook(book);
 	}
+	
+
 
 }

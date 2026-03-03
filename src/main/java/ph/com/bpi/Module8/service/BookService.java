@@ -72,5 +72,9 @@ public class BookService {
 		 
 	}
 	
+	public List<Book> displayBooks(){
+		return bookList;
+	}
+	
 
 }
