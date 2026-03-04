@@ -1,18 +1,26 @@
 package ph.com.bpi.Module8.model;
 
-public class Book {
+
+import jakarta.persistence.Entity; 
+import jakarta.persistence.Id; 
+import lombok.Data; 
+
+@Entity 
+@Data
+public class BookEntity {
 	
+	@Id
 	private String id;
 	private String title;
 	private String author;
 	
-	public Book(String id, String title, String author) {
+	public BookEntity(String id, String title, String author) {
 		this.id = id;
 		this.title = title;
 		this.author = author;
 	}
 	
-	public Book() {
+	public BookEntity() {
 
 	}
 	

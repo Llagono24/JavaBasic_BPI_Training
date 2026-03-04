@@ -13,9 +13,7 @@ import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.bind.annotation.ResponseStatus;
 import org.springframework.web.bind.annotation.RestController;
 
-
-
-import ph.com.bpi.Module8.model.Book;
+import ph.com.bpi.Module8.dto.BookDTO;
 import ph.com.bpi.Module8.service.BookService;
 
 @RestController
@@ -23,40 +21,42 @@ import ph.com.bpi.Module8.service.BookService;
 public class BookController {
 
 	
-	BookService bookService = new BookService();
+	private final BookService bookService;
 	
-	public BookController() {
-		bookService.initialBooks();
+	
+	public BookController(BookService bookService) {
+		this.bookService = bookService;
 	}
 	
+	
 	@GetMapping
-	public List<Book> initialBooks() {
+	public List<BookDTO> initialBooks() {
 		return bookService.initialBooks();
 	}
 	
 	//for Activity8.3
 	@GetMapping("/{id}")
-	public Book getBook(@PathVariable String id) {
+	public BookDTO getBook(@PathVariable String id) {
 		return bookService.findBook(id);
 	}
 	
 	//for Activity8.4
 	@GetMapping("/search")
 	@ResponseStatus(HttpStatus.FOUND)
-	public List<Book> searchBook(@RequestParam String title, @RequestParam String author) {
+	public List<BookDTO> searchBook(@RequestParam String title, @RequestParam String author) {
 		return bookService.searchBook(title, author);
 	}
 	
 	//For Activity8.5
 	@ResponseBody
 	@GetMapping("/display")
-	public List<Book> displayBooks(){
+	public List<BookDTO> displayBooks(){
 		return bookService.displayBooks();
 	}
 	
 	@PostMapping
 	@ResponseStatus(HttpStatus.CREATED)
-	public Book createBook(@RequestBody Book book) {
+	public BookDTO createBook(@RequestBody BookDTO book) {
 		return bookService.saveBook(book);
 	}
 	

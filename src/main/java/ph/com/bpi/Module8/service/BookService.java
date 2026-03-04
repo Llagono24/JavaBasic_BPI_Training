@@ -6,28 +6,41 @@ import java.util.List;
 //import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import ph.com.bpi.Module8.model.Book;
+import ph.com.bpi.Module8.dto.BookDTO;
+import ph.com.bpi.Module8.model.BookEntity;
+import ph.com.bpi.Module8.mapper.BookMapper;
 
 @Service
 public class BookService {
-	List<Book> bookList = new ArrayList<Book>();
+	private final BookMapper bookMapper;
+	
+	List<BookEntity> bookList = new ArrayList<BookEntity>();
+	List<BookDTO> bookDTOList = new ArrayList<BookDTO>();
+	
+	public BookService(BookMapper bookMapper) {
+		this.bookMapper = bookMapper;
+	}
 	
 	
-	public List<Book> initialBooks() {
+	
+	public List<BookDTO> initialBooks() {
 		
 		if(bookList == null || bookList.isEmpty() || bookList.size() == 0) {
 			initializeBooks();
-			
 		}
 		
-		return bookList;
+		for(BookEntity book : bookList) {
+			bookDTOList.add(bookMapper.toDTO(book));
+		}
+		
+		return bookDTOList;
 		
 	}
 	
-	public List<Book> initializeBooks() {
-		Book book1 = new Book("1", "The Lord of the Rings", "J.R.R. Tolkien");
-		Book book2 = new Book("2", "Siddhartha", "Hermann Hesse");
-		Book book3 = new Book("3", "Harry Potter and the Philosopher's Stone", "J.K. Rowling");
+	public List<BookEntity> initializeBooks() {
+		BookEntity book1 = new BookEntity("1", "The Lord of the Rings", "J.R.R. Tolkien");
+		BookEntity book2 = new BookEntity("2", "Siddhartha", "Hermann Hesse");
+		BookEntity book3 = new BookEntity("3", "Harry Potter and the Philosopher's Stone", "J.K. Rowling");
 		
 		bookList.add(book1);
 		bookList.add(book2);
@@ -36,8 +49,8 @@ public class BookService {
 		return bookList;
 	}
 	
-	public Book findBook(String id) {
-		Book book1 = new Book();
+	public BookDTO findBook(String id) {
+		BookEntity book1 = new BookEntity();
 		
 		for(int i = 0; i < bookList.size(); i++) {
 			
@@ -46,20 +59,22 @@ public class BookService {
 			}
 		}
 		
-		return book1;
+		return bookMapper.toDTO(book1);
 	}
 	
-	public Book saveBook(Book book) {
-
-		bookList.add(book);
+	public BookDTO saveBook(BookDTO book) {
+		bookDTOList.add(book);
+		
+		bookList.add(bookMapper.toEntity(book));
 		
 		return book;
 	}
 	
 	//search book
-	public List<Book> searchBook(String title, String author) {
+	public List<BookDTO> searchBook(String title, String author) {
 		
-		List<Book> bookList1 = new ArrayList<Book>();
+		List<BookEntity> bookList1 = new ArrayList<BookEntity>();
+		List<BookDTO> BookDTOList1 = new ArrayList<BookDTO>();
 		
 		for(int i = 0; i < bookList.size(); i++) {
 			if(bookList.get(i).getTitle().equals(title) && bookList.get(i).getAuthor().equals(author)) {
@@ -67,13 +82,16 @@ public class BookService {
 			}
 		}
 		
-		
-		return bookList1;
+		for(BookEntity book : bookList1) {
+			BookDTOList1.add(bookMapper.toDTO(book));
+		}
+	
+		return BookDTOList1;
 		 
 	}
 	
-	public List<Book> displayBooks(){
-		return bookList;
+	public List<BookDTO> displayBooks(){
+		return bookDTOList;
 	}
 	
 
