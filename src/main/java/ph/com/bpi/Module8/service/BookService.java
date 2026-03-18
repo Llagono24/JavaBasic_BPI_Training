@@ -8,17 +8,20 @@ import org.springframework.stereotype.Service;
 
 import ph.com.bpi.Module8.dto.BookDTO;
 import ph.com.bpi.Module8.model.BookEntity;
+import ph.com.bpi.Module8.repository.BookRepository;
 import ph.com.bpi.Module8.mapper.BookMapper;
 
 @Service
 public class BookService {
 	private final BookMapper bookMapper;
+	private final BookRepository bookRepository;
 	
 	List<BookEntity> bookList = new ArrayList<BookEntity>();
 	List<BookDTO> bookDTOList = new ArrayList<BookDTO>();
 	
-	public BookService(BookMapper bookMapper) {
+	public BookService(BookMapper bookMapper, BookRepository bookRepository) {
 		this.bookMapper = bookMapper;
+		this.bookRepository = bookRepository;
 	}
 	
 	
@@ -32,7 +35,8 @@ public class BookService {
 		for(BookEntity book : bookList) {
 			bookDTOList.add(bookMapper.toDTO(book));
 		}
-		
+		List<BookEntity> bookList1 = bookRepository.saveAll(bookList);
+		System.out.println(bookList1.size());
 		return bookDTOList;
 		
 	}
@@ -74,7 +78,7 @@ public class BookService {
 	public List<BookDTO> searchBook(String title, String author) {
 		
 		List<BookEntity> bookList1 = new ArrayList<BookEntity>();
-		List<BookDTO> BookDTOList1 = new ArrayList<BookDTO>();
+		List<BookDTO> bookDTOList1 = new ArrayList<BookDTO>();
 		
 		for(int i = 0; i < bookList.size(); i++) {
 			if(bookList.get(i).getTitle().equals(title) && bookList.get(i).getAuthor().equals(author)) {
@@ -83,16 +87,28 @@ public class BookService {
 		}
 		
 		for(BookEntity book : bookList1) {
-			BookDTOList1.add(bookMapper.toDTO(book));
+			bookDTOList1.add(bookMapper.toDTO(book));
 		}
 	
-		return BookDTOList1;
+		return bookDTOList1;
 		 
 	}
 	
 	public List<BookDTO> displayBooks(){
-		return bookDTOList;
+		
+		
+		List<BookDTO> bookDTOList1 = new ArrayList<BookDTO>();
+		List<BookEntity> bookList1 = bookRepository.findAll();
+		
+		for(BookEntity book : bookList1) {
+			bookDTOList1.add(bookMapper.toDTO(book));
+		}
+		
+
+		return bookDTOList1;
 	}
+	
+	
 	
 
 }
